@@ -1,0 +1,2 @@
+1、最长升序序列：http://acm.hdu.edu.cn/showproblem.php?pid=1025
+2、最长公共升序序列：http://acm.hdu.edu.cn/showproblem.php?pid=1423
