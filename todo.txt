@@ -1,4 +1,5 @@
 https://www.cnblogs.com/Wu-Shi/p/5410069.html
 http://poj.org/problem?id=1003
 树状数组详解：https://www.cnblogs.com/xenny/p/9739600.html
+生成函数(母函数)——目前最全的讲解：https://blog.csdn.net/qq_41357771/article/details/83449481
 http://acm.hdu.edu.cn/showproblem.php?pid=1069
