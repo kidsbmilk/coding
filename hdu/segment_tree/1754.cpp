@@ -40,6 +40,7 @@ void update(vector<int>& vi_seg, int index, int left, int right, int x, int v) {
 
 int query(const vector<int>& vi_seg, int index, int left, int right, int L, int R) {
 	if (L <= left && right <= R) { // 不用怀疑这个[L, R]的区间大于[left, right]，从一开始就大，甚至直到搜索到叶子节点，可以画图看一看。
+		// 这个如果写为L == left && right == R，会超内存限制，过不了！！！
 		return vi_seg[index];
 	}
 	int mid = (left + right) / 2;
@@ -124,6 +125,7 @@ void update(vector<int>& vi_seg, int index, int left, int right, int x, int v) {
 
 int query(const vector<int>& vi_seg, int index, int left, int right, int L, int R) {
 	if (L <= left && right <= R) { // 不用怀疑这个[L, R]的区间大于[left, right]，从一开始就大，甚至直到搜索到叶子节点，可以画图看一看。
+		// 这个如果写为L == left && right == R，会超内存限制，过不了！！！
 		return vi_seg[index];
 	}
 	int mid = (left + right) / 2;

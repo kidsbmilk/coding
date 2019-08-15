@@ -9,5 +9,6 @@ http://poj.org/problem?id=1003
 生成函数(母函数)——目前最全的讲解：https://blog.csdn.net/qq_41357771/article/details/83449481
 http://acm.hdu.edu.cn/showproblem.php?pid=1069
 2844、2845都是两次使用动规
-#define IOS ios_base::sync_with_stdio(0); cin.tie(0);
+#define IOS ios_base::sync_with_stdio(0); cin.tie(0) 尽管关闭了cin的同步，也还是慢，有些题会超时。
 1025、1257都是最长上升子序列
+并查集详解：https://blog.csdn.net/qq_41593380/article/details/81146850
