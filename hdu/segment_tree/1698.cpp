@@ -59,8 +59,8 @@ int main() {
 		for (int i = 1; i <= t; i++) {
 			int n, q;
 			cin >> n >> q;
-			vector<int> vi_seg(n * 4, 0); // 这个开到n*3会WA，竟然不是RE，好奇怪？？？
-			vector<int> vi_lazy(n * 4, 0); // 这个开到n*3会WA，竟然不是RE，好奇怪？？？
+			vector<int> vi_seg(n * 4, 0); // 这个开到n*3会WA，竟然不是RE，好奇怪？？？可能这个越界的不多，同时越界的地方的数值也合理，所以没报RE，而是报WA了。
+			vector<int> vi_lazy(n * 4, 0); // 这个开到n*3会WA，竟然不是RE，好奇怪？？？可能这个越界的不多，同时越界的地方的数值也合理，所以没报RE，而是报WA了。
 			build(vi_seg, vi_lazy, 1, 1, n);
 			while(q--) {
 				int ix, iy, iz;
