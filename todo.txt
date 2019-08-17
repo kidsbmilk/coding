@@ -1,5 +1,6 @@
 HDOJ 动态规划总结：https://www.cnblogs.com/Wu-Shi/p/5410069.html （已做完）
 线段树经典类型归纳：https://blog.csdn.net/u011466175/article/details/38294513
+线段树经典题目（一定要做完）：https://blog.csdn.net/yrhsilence/article/details/5793699
 线段树分类总结：https://blog.csdn.net/u013656184/article/details/47393541
 
 
@@ -17,4 +18,10 @@ http://acm.hdu.edu.cn/showproblem.php?pid=1069
 并查集详解：https://blog.csdn.net/qq_41593380/article/details/81146850
 
 https://blog.csdn.net/li1615882553/article/details/79703364   https://nanti.jisuanke.com/t/392
+
+线段树：
+http://acm.hdu.edu.cn/showproblem.php?pid=3265
+http://acm.hdu.edu.cn/showproblem.php?pid=5023
+
+
 
