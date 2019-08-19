@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
+#include<cstdio>
 using namespace std;
 
 #define IOS ios_base::sync_with_stdio(0); cin.tie(0)
@@ -8,14 +9,15 @@ using namespace std;
 #define left_mode index * 2, left, mid
 #define right_mode index * 2 + 1, mid + 1, right
 
-void pushup(vector<int>& vi_seg, int index) {
+void pushup(vector<int> & vi_seg, int index) {
 	vi_seg[index] = max(vi_seg[index * 2], vi_seg[index * 2 + 1]);
 }
 
 void update(vector<int>& vi_seg, int index, int left, int right, int v) {
 	if (left == right) {
 		vi_seg[index] -= v;
-		cout << left << endl;
+		// cout << left << endl; // 会超时
+		printf("%d\n", left);
 		return;
 	}
 	int mid = (left + right) / 2;
@@ -37,7 +39,8 @@ int main() {
 		vector<int> vi_seg(isize * 4 + 10, w);
 		for (int i = 0; i < n; i++) {
 			int itp;
-			cin >> itp;
+			// cin >> itp; // 会超时
+			scanf("%d", &itp);
 			if (vi_seg[1] < itp) {
 				cout << -1 << endl;
 			}
