@@ -9,7 +9,9 @@ http://poj.org/problem?id=1003
 树状数组详解：https://www.cnblogs.com/xenny/p/9739600.html
 线段树与树状数组的对比应用：https://www.cnblogs.com/--lr/p/9345779.html
 线段树与树状数组的区别：https://blog.csdn.net/honghuidan/article/details/77527808
-http://acm.hdu.edu.cn/showproblem.php?pid=1394 这个题还能用树状数组来解
+http://acm.hdu.edu.cn/showproblem.php?pid=1394   这个题还能用树状数组来解
+http://acm.hdu.edu.cn/showproblem.php?pid=1540   这个题还能用树状数组来解
+http://poj.org/problem?id=2892   这个题还能用树状数组来解
 生成函数(母函数)——目前最全的讲解：https://blog.csdn.net/qq_41357771/article/details/83449481
 http://acm.hdu.edu.cn/showproblem.php?pid=1069
 2844、2845都是两次使用动规
@@ -22,5 +24,28 @@ https://blog.csdn.net/li1615882553/article/details/79703364   https://nanti.jisu
 线段树：
 http://acm.hdu.edu.cn/showproblem.php?pid=3265
 http://acm.hdu.edu.cn/showproblem.php?pid=5023
+
+线段树区间合并：
+http://poj.org/problem?id=3667
+http://acm.hdu.edu.cn/showproblem.php?pid=1540
+http://poj.org/problem?id=2892
+http://acm.hdu.edu.cn/showproblem.php?pid=2871
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
