@@ -157,6 +157,7 @@ int main() {
 				vpii.erase(vpii.begin() + 1, vpii.end());
 			}
 		}
+		cout << endl;
 	}
 	return 0;
 }
