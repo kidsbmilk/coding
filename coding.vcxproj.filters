@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hdu\segment_tree\2871.cpp">
+    <ClCompile Include="pku\water\2739.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
