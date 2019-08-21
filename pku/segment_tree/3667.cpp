@@ -1,3 +1,5 @@
+// 对比hdu 1540, hdu 2871
+
 #include<iostream>
 #include<vector>
 #include<cstdio>
@@ -25,15 +27,16 @@ void pushup(vector<int>& vi_seg, vector<int>& vi_seg_left, vector<int>& vi_seg_r
 	int right = left + 1;
 	vi_seg_left[index] = vi_seg_left[left]; // vi_seg_left表示从左起的连续空间，从左子树加到右子树
 	if (vi_seg_left[left] == count - (count / 2)) {
-		vi_seg_left[index] += vi_seg_left[right];
+		vi_seg_left[index] += vi_seg_left[right]; // vi_seg_left[right]表示右子节点从左开始的连续空间。
 	}
 	vi_seg_right[index] = vi_seg_right[right]; // vi_seg_right表示从右起的连续空间，从右子树加到左子树
 	if (vi_seg_right[right] == count / 2) {
-		vi_seg_right[index] += vi_seg_right[left];
+		vi_seg_right[index] += vi_seg_right[left]; // vi_seg_right[left]表示左子节点从右开始的连续空间。
 	}
 	vi_seg[index] = max(max(vi_seg[left], vi_seg[right]), vi_seg_left[right] + vi_seg_right[left]);
 }
 
+// 这里是查找一个范围，所以有L、R这两个边界，对比hdu 1540。
 void update(vector<int>& vi_seg, vector<int>& vi_seg_left, vector<int>& vi_seg_right, vector<int>& vi_lazy, int index, int left, int right, int L, int R, int b) {
 	if (L <= left && right <= R) {
 		vi_seg[index] = vi_seg_left[index] = vi_seg_right[index] = (b ? 0 : right - left + 1);
@@ -56,10 +59,10 @@ void update(vector<int>& vi_seg, vector<int>& vi_seg_left, vector<int>& vi_seg_r
 	}
 	*/
 	if (L <= mid) {
-		update(vi_seg, vi_seg_left, vi_seg_right, vi_lazy, left_mode, L, R, b);
+		update(vi_seg, vi_seg_left, vi_seg_right, vi_lazy, left_mode, L, R, b); // 注意：这个还是L、R，并没有变为L、mid。对比上面的写法。
 	}
 	if (mid < R) { // 注意：不是else if，之前因这里出错了。
-		update(vi_seg, vi_seg_left, vi_seg_right, vi_lazy, right_mode, L, R, b);
+		update(vi_seg, vi_seg_left, vi_seg_right, vi_lazy, right_mode, L, R, b); // 注意：这个还是L、R，并没有变为mid + 1、R。对比上面的写法。
 	}
 	pushup(vi_seg, vi_seg_left, vi_seg_right, vi_lazy, index, right - left + 1);
 }

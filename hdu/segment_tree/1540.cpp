@@ -1,3 +1,5 @@
+// 对比pku 3667, hdu 2871
+
 #include<iostream>
 #include<cstdio>
 #include<vector>
@@ -22,6 +24,7 @@ void pushup(vector<int>& vi_seg, vector<int>& vi_seg_left, vector<int>& vi_seg_r
 	vi_seg[index] = max(max(vi_seg[left], vi_seg[right]), vi_seg_left[right] + vi_seg_right[left]);
 }
 
+// 这里查找单个值，所以没有查找边界，对比pku 3667。
 void update(vector<int>& vi_seg, vector<int>& vi_seg_left, vector<int>& vi_seg_right, int index, int left, int right, int x, int b) {
 	if (left == right) {
 		vi_seg[index] = vi_seg_left[index] = vi_seg_right[index] = b; // 这个b为1表示可用，为0表示不可用。下面的pushup会更新上层节点。
@@ -42,6 +45,7 @@ int query(vector<int>& vi_seg, vector<int>& vi_seg_left, vector<int>& vi_seg_rig
 		return vi_seg[index];
 	}
 	int mid = (left + right) / 2;
+	// 这里也算是灵活运行线段树的查询了。
 	if (x <= mid) {
 		if (x >= mid - vi_seg_right[index * 2] + 1) { // index * 2节点从右侧往左查找连续的空间，此空间包含x，所以要查找index * 2 + 1节点后面可连通的空间。
 			return query(vi_seg, vi_seg_left, vi_seg_right, left_mode, x) + query(vi_seg, vi_seg_left, vi_seg_right, right_mode, mid + 1);
