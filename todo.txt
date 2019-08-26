@@ -31,8 +31,6 @@ http://acm.hdu.edu.cn/showproblem.php?pid=1540
 http://poj.org/problem?id=2892
 http://acm.hdu.edu.cn/showproblem.php?pid=2871  这是我自己照着别人的思路实现的，把这个代码吃透，这里有非常多细节上的注释。
 
-2871待测试
-
 POJ刷题指南：https://blog.csdn.net/monkeyduck/article/details/9788669
 杭电acm阶段之理工大版：https://blog.csdn.net/liuqiyao_01/article/details/8477645
 POJ题目分类【实在是不知道哪个是原创了】：https://blog.csdn.net/liuqiyao_01/article/details/8477801
